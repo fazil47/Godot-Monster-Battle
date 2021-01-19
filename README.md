@@ -2,6 +2,8 @@
 Simple monster battle system made in Godot
 Made in Godot_v3.2.3 Mono.
 
+![](Media/monster-battle.gif)
+
 ## Credits:
 1) 3D Assets
 - "Wolf with Animations" (https://skfb.ly/GnQ6) by 3DHaupt is licensed under CC Attribution-NonCommercial-ShareAlike (http://creativecommons.org/licenses/by-nc-sa/4.0/).
