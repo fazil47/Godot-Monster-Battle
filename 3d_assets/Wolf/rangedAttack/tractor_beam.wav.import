@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tractor_beam.wav-d73a6391a7fb57d630f60ed84dd65ba4.sample"
+
+[deps]
+
+source_file="res://3d_assets/Wolf/rangedAttack/tractor_beam.wav"
+dest_files=[ "res://.import/tractor_beam.wav-d73a6391a7fb57d630f60ed84dd65ba4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

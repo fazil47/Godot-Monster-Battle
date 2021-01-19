@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://3d_assets/DefeatSmoke/blue_myst.png" type="Texture" id=1]
+[ext_resource path="res://3d_assets/DefeatSmoke/effect/Plane.tres" type="ArrayMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+vertex_color_use_as_albedo = true
+params_cull_mode = 2
+params_depth_draw_mode = 2
+params_billboard_mode = 3
+params_billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0, 0, 0, 0.862745 )
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="Curve" id=2]
+min_value = -1.0
+_data = [ Vector2( 0, 0.890909 ), 0.0, 0.0, 0, 0, Vector2( 1, -0.0545454 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+width = 128
+curve = SubResource( 2 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.918519 )
+colors = PoolColorArray( 1, 1, 1, 0.8, 0, 0, 0, 0.0196078 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+width = 128
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.14557, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -3.50114, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+width = 128
+curve = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+emission_shape = 1
+emission_sphere_radius = 3.0
+gravity = Vector3( 0, 0.8, 0 )
+angular_velocity = 82.76
+angular_velocity_random = 0.53
+angular_velocity_curve = SubResource( 3 )
+angle = -248.2
+angle_random = 0.44
+scale = 2.0
+scale_curve = SubResource( 7 )
+color_ramp = SubResource( 5 )
+
+[sub_resource type="SphereShape" id=9]
+
+[node name="DefeatSmoke" type="KinematicBody"]
+
+[node name="Smoke" type="Particles" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+material_override = SubResource( 1 )
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+process_material = SubResource( 8 )
+draw_pass_1 = ExtResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 9 )

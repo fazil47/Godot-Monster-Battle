@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bite.wav-74c5fae97fb1d237035fd1cd4f56bafa.sample"
+
+[deps]
+
+source_file="res://3d_assets/Wolf/meleeAttack/bite.wav"
+dest_files=[ "res://.import/bite.wav-74c5fae97fb1d237035fd1cd4f56bafa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

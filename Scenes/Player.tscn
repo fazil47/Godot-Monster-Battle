@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://3d_assets/Dragon/Dragon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/CameraGimbal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/PlayerController.cs" type="Script" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5.80299, 18.0797, 4.02733 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 5.80336, 1, 6.16337 )
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 7 )
+
+[node name="CameraGimbal" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.6269, 5.92844 )
+maxZoom = 1.5
+minZoom = 0.3
+
+[node name="MonsterNode" type="Spatial" parent="."]
+
+[node name="SmokyDragon" parent="MonsterNode" instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.0942, 0 )
+shape = SubResource( 1 )
+
+[node name="DodgeDurationTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.4
+one_shot = true
+
+[node name="DodgeCooldownTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.2
+one_shot = true
+
+[node name="RangedAttackTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="MeleeAttackArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.77562 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeleeAttackArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994797, 5.97214 )
+shape = SubResource( 2 )
+
+[node name="MeleeAttackTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="StaggerTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+[connection signal="body_entered" from="MeleeAttackArea" to="." method="_on_MeleeAttackArea_body_entered"]
+[connection signal="body_exited" from="MeleeAttackArea" to="." method="_on_MeleeAttackArea_body_exited"]

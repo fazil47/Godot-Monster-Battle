@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/autumn_background.wav-6d2fff0c4ee7a7c5428b315445b297e1.sample"
+
+[deps]
+
+source_file="res://Audio/autumn_background.wav"
+dest_files=[ "res://.import/autumn_background.wav-6d2fff0c4ee7a7c5428b315445b297e1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
