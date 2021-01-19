@@ -8,7 +8,7 @@ Made in Godot_v3.2.3 Mono.
 - Dragon from Remix3D (Non-commercial).
 - Ranged attack scene from https://github.com/godotengine/tps-demo
 2) Audio
-- autumn_background.wav - freesound.org/people/Stek59 
+- autumn_background.wav - https://freesound.org/people/Stek59/
 - Battle.wav from https://freemusicarchive.org/music/Visager/Songs_From_An_Unmade_World_2/Visager_-_Songs_From_An_Unmade_World_2_-_05_Battle
 - ice_break.wav from https://www.zapsplat.com/author/zapsplat/
 - flames.wav from https://www.zapsplat.com/author/zapsplat/
