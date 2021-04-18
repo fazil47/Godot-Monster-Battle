@@ -1,6 +1,7 @@
 # Godot-Monster-Battle
 Simple monster battle system made in Godot
 Made in Godot_v3.2.3 Mono.
+[Windows Demo](https://github.com/fazil47/Godot-Monster-Battle/releases/tag/1.0)
 
 ![](Media/monster-battle.gif)
 
